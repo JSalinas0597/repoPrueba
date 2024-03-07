@@ -1,0 +1,5 @@
+auth required pam_unix.so
+#account sufficient pam_localuser.so
+account required pam_unix.so
+#auth required pam_listfile.so item=user sense=allow file=/var/www/html/archivos_privados/allowed_users/usuarios-permitidos onerr=fail
+auth required pam_listfile.so item=user sense=deny file=/etc/security/usuarios_denegados onerr=succeed
