@@ -1,0 +1,36 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+/*Zona hacia adelante*/
+zone "servicios.com" {
+type master;
+file "/etc/bind/db.servicios.com";
+};
+
+/*Zona uao-priv*/
+zone "uao-priv.com" {
+type master;
+file "/etc/bind/db.uao-priv.com";
+};
+
+
+zone "salinas.com" {
+type master;
+file "/etc/bind/db.salinas.com";
+};
+
+/*Zona hacia adelante*/
+zone "miotrositio.com" {
+type master;
+file "/etc/bind/db.miotrositio.com";
+};
+
+zone "50.168.192.in-addr.arpa" {
+type master;
+file "/etc/bind/db.5";
+};
